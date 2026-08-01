@@ -7,3 +7,6 @@ function max3(a, b, c) {
         return c;
     }
 }
+console.log(max3(10, 20, 15)); // 20
+console.log(max3(8, 3, 5));    // 8
+console.log(max3(4, 9, 12));   // 12
