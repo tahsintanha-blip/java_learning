@@ -1,7 +1,7 @@
 const me = {
     name: "Tahsin Tanha",
     dept: "CSE",
-    semester: "4th"
+    semester: "4thg"
 };
 
 const { name, semester } = me;
