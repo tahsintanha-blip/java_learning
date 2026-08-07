@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Counter</title>
+</head>
+<body>
+
+<h2>Character Counter</h2>
+
+<textarea id="text" rows="5" cols="30"></textarea>
+
+<p id="count">Characters: 0</p>
+
+<script>
+const text = document.getElementById("text");
+const count = document.getElementById("count");
+
+text.addEventListener("input", function () {
+    count.innerHTML = "Characters: " + text.value.length;
+});
+</script>
+
+</body>
+</html>
