@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2</title>
+</head>
+<body>
+
+<script>
+function coinFlip() {
+
+    return new Promise(function (resolve, reject) {
+
+        const flip = Math.random();
+
+        if (flip < 0.5) {
+            resolve("Heads");
+        } else {
+            reject("Tails");
+        }
+
+    });
+
+}
+
+coinFlip()
+.then(function(result){
+    console.log(result);
+})
+.catch(function(error){
+    console.log(error);
+});
+</script>
+
+</body>
+</html>
