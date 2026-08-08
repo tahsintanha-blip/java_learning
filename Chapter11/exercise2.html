@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 11 Exercise 2</title>
+</head>
+<body>
+
+<script>
+
+function parseUser(text) {
+
+    try {
+
+        const user = JSON.parse(text);
+
+        return "Welcome, " + user.name;
+
+    } catch (error) {
+
+        return "Sorry, the data is invalid.";
+
+    }
+
+}
+
+console.log(parseUser('{"name":"Tanha"}'));
+
+console.log(parseUser("{broken json}"));
+
+</script>
+
+</body>
+</html>
