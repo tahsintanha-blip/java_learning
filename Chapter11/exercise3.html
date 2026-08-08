@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 11 Exercise 3</title>
+</head>
+<body>
+
+<script>
+
+function calculateTotal(marks) {
+
+    let total = 0;
+
+    for (const mark of marks) {
+        total += mark;
+    }
+
+    return total;
+}
+
+function calculateAverage(marks) {
+
+    const totalMarks = calculateTotal(marks);
+
+    return totalMarks / marks.length;
+}
+
+const studentMarks = [70, 80, 90];
+
+console.log("Total:", calculateTotal(studentMarks));
+
+console.log("Average:", calculateAverage(studentMarks));
+
+</script>
+
+</body>
+</html>
