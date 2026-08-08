@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 13 Exercise 1</title>
+</head>
+<body>
+
+<script>
+
+const arr = [1, 2, 3, 4, 5];
+
+// (a) Printing every pair
+function printPairs(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            console.log(arr[i], arr[j]);
+        }
+    }
+}
+
+// (b) Checking if a number is even
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+// (c) Summing an array
+function sumArray(arr) {
+    let sum = 0;
+
+    for (const number of arr) {
+        sum += number;
+    }
+
+    return sum;
+}
+
+console.log("Big-O of printing every pair: O(n²)");
+console.log("Big-O of checking even: O(1)");
+console.log("Big-O of summing an array: O(n)");
+
+</script>
+
+</body>
+</html>
