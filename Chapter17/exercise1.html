@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 17 Exercise 1</title>
+</head>
+<body>
+
+<script>
+
+function sumTo(n) {
+
+    if (n === 1) {
+        return 1;
+    }
+
+    return n + sumTo(n - 1);
+}
+
+function sumToLoop(n) {
+
+    let sum = 0;
+
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    return sum;
+}
+
+console.log("Recursive:", sumTo(5));
+console.log("Loop:", sumToLoop(5));
+
+</script>
+
+</body>
+</html>
