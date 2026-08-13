@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 17 Exercise 2</title>
+</head>
+<body>
+
+<script>
+
+function reverseString(str) {
+
+    if (str === "") {
+        return "";
+    }
+
+    return reverseString(str.slice(1)) + str[0];
+}
+
+console.log(reverseString("Hello"));
+
+</script>
+
+</body>
+</html>
