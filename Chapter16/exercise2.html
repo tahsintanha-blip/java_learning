@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 16 Exercise 2</title>
+</head>
+<body>
+
+<script>
+
+function isBalanced(str) {
+
+    const stack = [];
+
+    const pairs = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    };
+
+    for (const ch of str) {
+
+        if ("([{".includes(ch)) {
+            stack.push(ch);
+        }
+
+        else if (")]}".includes(ch)) {
+
+            if (stack.pop() !== pairs[ch]) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
+}
+
+const code = `
+function test() {
+    if (true) {
+        console.log("Hello");
+    }
+}
+`;
+
+console.log(isBalanced(code));
+
+</script>
+
+</body>
+</html>
