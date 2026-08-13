@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 18 Exercise 4</title>
+</head>
+<body>
+
+<script>
+
+// 1. Reverse a String
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+
+// 2. Valid Parentheses
+function isValid(str) {
+
+    const stack = [];
+
+    const pairs = {
+        ")": "(",
+        "]": "[",
+        "}": "{"
+    };
+
+    for (const ch of str) {
+
+        if (ch === "(" || ch === "[" || ch === "{") {
+            stack.push(ch);
+        }
+
+        else if (ch === ")" || ch === "]" || ch === "}") {
+
+            if (stack.pop() !== pairs[ch]) {
+                return false;
+            }
+        }
+    }
+
+    return stack.length === 0;
+}
+
+
+// 3. Two Sum
+function twoSum(arr, target) {
+
+    const seen = new Map();
+
+    for (let i = 0; i < arr.length; i++) {
+
+        const needed = target - arr[i];
+
+        if (seen.has(needed)) {
+            return [seen.get(needed), i];
+        }
+
+        seen.set(arr[i], i);
+    }
+
+    return [];
+}
+
+
+// Outputs
+console.log("Reverse:", reverseString("Hello"));
+
+console.log("Valid Parentheses:", isValid("({[]})"));
+
+console.log("Two Sum:", twoSum([2, 7, 11, 15], 9));
+
+</script>
+
+</body>
+</html>
