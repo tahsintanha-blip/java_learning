@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 17 Exercise 4</title>
+</head>
+<body>
+
+<script>
+
+function firstNonRepeating(str) {
+
+    const count = new Map();
+
+    for (const ch of str) {
+        count.set(ch, (count.get(ch) ?? 0) + 1);
+    }
+
+    for (const ch of str) {
+
+        if (count.get(ch) === 1) {
+            return ch;
+        }
+    }
+
+    return null;
+}
+
+console.log(firstNonRepeating("aabbcdd"));
+
+</script>
+
+</body>
+</html>
