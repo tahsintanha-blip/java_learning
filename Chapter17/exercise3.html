@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 17 Exercise 3</title>
+</head>
+<body>
+
+<script>
+
+class Node {
+
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+
+    head = null;
+
+    addFront(value) {
+
+        const node = new Node(value);
+
+        node.next = this.head;
+
+        this.head = node;
+    }
+
+    addEnd(value) {
+
+        const node = new Node(value);
+
+        if (!this.head) {
+            this.head = node;
+            return;
+        }
+
+        let current = this.head;
+
+        while (current.next) {
+            current = current.next;
+        }
+
+        current.next = node;
+    }
+
+    print() {
+
+        let current = this.head;
+        let output = [];
+
+        while (current) {
+            output.push(current.value);
+            current = current.next;
+        }
+
+        console.log(output.join(" -> "));
+    }
+}
+
+const list = new LinkedList();
+
+list.addFront(20);
+list.addFront(10);
+
+list.addEnd(30);
+
+list.print();
+
+console.log("addEnd Big-O: O(n)");
+
+</script>
+
+</body>
+</html>
