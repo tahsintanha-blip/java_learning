@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 16 Exercise 3</title>
+</head>
+<body>
+
+<script>
+
+class Queue {
+
+    #items = [];
+
+    enqueue(x) {
+        this.#items.push(x);
+    }
+
+    dequeue() {
+        return this.#items.shift();
+    }
+
+    front() {
+        return this.#items[0];
+    }
+
+    get size() {
+        return this.#items.length;
+    }
+}
+
+const hospital = new Queue();
+
+hospital.enqueue("Rahim");
+hospital.enqueue("Karim");
+hospital.enqueue("Salma");
+hospital.enqueue("Nadia");
+hospital.enqueue("Hasan");
+
+console.log("Served:", hospital.dequeue());
+console.log("Served:", hospital.dequeue());
+
+console.log("Next patient:", hospital.front());
+console.log("Patients remaining:", hospital.size);
+
+</script>
+
+</body>
+</html>
