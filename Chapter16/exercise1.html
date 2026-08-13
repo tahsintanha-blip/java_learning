@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 16 Exercise 1</title>
+</head>
+<body>
+
+<script>
+
+class Stack {
+    #items = [];
+
+    push(x) {
+        this.#items.push(x);
+    }
+
+    pop() {
+        return this.#items.pop();
+    }
+
+    isEmpty() {
+        return this.#items.length === 0;
+    }
+}
+
+function reverseString(str) {
+
+    const stack = new Stack();
+
+    for (const ch of str) {
+        stack.push(ch);
+    }
+
+    let reversed = "";
+
+    while (!stack.isEmpty()) {
+        reversed += stack.pop();
+    }
+
+    return reversed;
+}
+
+console.log(reverseString("Hello"));
+
+</script>
+
+</body>
+</html>
