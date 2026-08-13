@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chapter 17 Exercise 5</title>
+</head>
+<body>
+
+<script>
+
+function mostFrequent(arr) {
+
+    const count = new Map();
+
+    let mostFrequentValue = arr[0];
+    let highestCount = 0;
+
+    for (const value of arr) {
+
+        const newCount = (count.get(value) ?? 0) + 1;
+
+        count.set(value, newCount);
+
+        if (newCount > highestCount) {
+            highestCount = newCount;
+            mostFrequentValue = value;
+        }
+    }
+
+    return mostFrequentValue;
+}
+
+console.log(mostFrequent([2, 3, 2, 5, 3, 2, 4]));
+
+</script>
+
+</body>
+</html>
